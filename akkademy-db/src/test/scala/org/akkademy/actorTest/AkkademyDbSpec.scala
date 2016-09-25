@@ -10,11 +10,11 @@ import org.scalatest.{BeforeAndAfterEach, FunSpecLike, Matchers}
   * Created by sirkleber on 25/09/16.
   */
 class AkkademyDbSpec extends FunSpecLike with Matchers with BeforeAndAfterEach {
-  implicit val system = ActorSystem
+  implicit val system = ActorSystem()
 
   describe("akkademyDb"){
     describe("given SetRequest") {
-      it("sould place key/value into map"){
+      it("should place key/value into map"){
         val actorRef = TestActorRef(new AkkademyDb)
 
         actorRef ! SetRequest("name", "Kleber")

@@ -18,6 +18,6 @@ class AkkademyDb extends Actor {
       log.info("received SetRequest - key: {} value: {}", key, value)
       map.put(key, value)
     }
-    case o: _ => log.info("received unknown message: {}", o)
+    case o => log.info("received unknown message: {}", o)
   }
 }
